@@ -5,7 +5,7 @@ var dbService = require('../services/bookingService');
 router.get('/', function(req, res, next) {
   
     var callback = function(result){
-      res.send(result);
+      res.send({'result':result});
     }
     dbService.getBookings(callback);
    

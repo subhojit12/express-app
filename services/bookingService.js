@@ -19,7 +19,7 @@ service.getBookings = function(callback){
       sql, function(err, results) {
       connection.release();
       if(err) { console.log(err); callback([{}]); return; }
-      callback({'results':results});
+      callback(results);
     });
   });
   //return result; //line 24 execute before db reply
